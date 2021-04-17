@@ -52,8 +52,10 @@ VisualCaptcha is the easiest to implement secure Captcha with images instead of 
 
 
 ### Note
- - Example/ folder contains the app/ and public/ files used for the laravel example shown here.
- - 
+ - Example/ folder contains the app/ and public/ files used for the laravel example shown here: 
+ ```
+captcha.blade.php
+``` 
  
 
 ## Usage
