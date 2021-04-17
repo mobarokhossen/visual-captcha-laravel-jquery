@@ -75,7 +75,7 @@ class CaptchaController extends Controller {
 
             if (!$frontendData)
             {
-                return Redirect::back()->withInput()->withErrors(array('message' => Lang::get('text.captcha.none')));
+                return redirect()->back()->withInput()->withErrors(array('message' => Lang::get('text.captcha.none')));
 
             } else
             {
@@ -89,11 +89,11 @@ class CaptchaController extends Controller {
 // DO ACTION HERE, ex send email, update db...
 
                         // This return back to form to show sucess, thats why i use status=1
-                        return Redirect::back()->with('status', 1);
+                        return redirect()->back()->with('status', 1);
 
                     } else
                     {
-                        return Redirect::back()->withInput()->withErrors(array('message' => Lang::get('text.captcha.image')));
+                        return redirect()->back()->withInput()->withErrors(array('message' => Lang::get('text.captcha.image')));
 
                     }
                 } else if ($audioAnswer = $request->input($frontendData['audioFieldName']))
@@ -106,16 +106,16 @@ class CaptchaController extends Controller {
 
 
                         // This return back to form to show sucess, thats why i use status=1
-                        return Redirect::back()->with('status', 1);
+                        return redirect()->back()->with('status', 1);
 
                     } else
                     {
-                        return Redirect::back()->withInput()->withErrors(array('message' => Lang::get('text.captcha.audio')));
+                        return redirect()->back()->withInput()->withErrors(array('message' => Lang::get('text.captcha.audio')));
 
                     }
                 } else
                 {
-                    return Redirect::back()->withInput()->withErrors(array('message' => Lang::get('text.captcha.incomplete')));
+                    return redirect()->back()->withInput()->withErrors(array('message' => Lang::get('text.captcha.incomplete')));
 
                 }
             }
@@ -123,7 +123,7 @@ class CaptchaController extends Controller {
         } else
         {
             //return "contact form with errors";
-            return Redirect::back()->withErrors($validator)->with('status', 2);;
+            return redirect()->back()->withErrors($validator)->with('status', 2);;
 
         }
 
