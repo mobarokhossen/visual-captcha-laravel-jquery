@@ -52,7 +52,7 @@ VisualCaptcha is the easiest to implement secure Captcha with images instead of 
 
 
 ### Note
- - Example/ folder contains the app/ and public/ files used for the laravel example shown here: [http://www.hugocabral.pt/visualCaptcha-Laravel-jQuery](http://www.hugocabral.pt/visualCaptcha-Laravel-jQuery "http://www.hugocabral.pt/visualCaptcha-Laravel-jQuery")
+ - Example/ folder contains the app/ and public/ files used for the laravel example shown here.
  - 
  
 
